@@ -46,5 +46,6 @@ def switch_tab(active_tab, toggle, borough, year_range):
 
 
 if __name__ == "__main__":
-    app.run(debug=True)
+    server = app.server
+
 

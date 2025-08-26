@@ -11,7 +11,7 @@ from dash_extensions.enrich import DashProxy
 icons = "https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
 
 
-app = DashProxy(external_stylesheets=[dbc.themes.SANDSTONE, icons])
+app = Dash(__name__,external_stylesheets=[dbc.themes.SANDSTONE, icons])
 app.title = "NYC Vehicle Collisions Analysis"
 
 app.layout = dbc.Container(
@@ -47,3 +47,4 @@ def switch_tab(active_tab, toggle, borough, year_range):
 
 if __name__ == "__main__":
     app.run(debug=True)
+
